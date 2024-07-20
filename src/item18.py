@@ -57,6 +57,9 @@ image_data = handle.read()
 
 def open_picture(profile_path):
     try:
+        # 'a' -> append : 파일이 존재하지 않으면 새 파일 생성, 파일이 존재하면 파일 끝에 데이터 추가
+        # 'b' -> Binary
+        # '+' -> Read and Write
         return open(profile_path, 'a+b')
     except OSError:
         print(f'경로를 열 수 없습니다: {profile_path}')
